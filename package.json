@@ -1,0 +1,32 @@
+{
+  "name": "hacktober-fest-2024",
+  "version": "0.1.0",
+  "bin": {
+    "app": "bin/app.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "bootstrap": "cdk bootstrap --profile hacktober-fest",
+    "diff": "cdk diff --profile hacktober-fest",
+    "synth": "cdk synth --profile hacktober-fest",
+    "sam": "sam local start-api -t ./cdk.out/MainStack.template.json --profile hacktober-fest",
+    "deploy": "cdk deploy --profile hacktober-fest",
+    "destroy": "cdk destroy --profile hacktober-fest"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "22.5.4",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "aws-cdk": "2.164.1",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.2"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.164.1",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
